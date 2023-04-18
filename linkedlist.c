@@ -109,15 +109,15 @@ void traverseinorder1(node *head)
         head = head->next;
     }
 }
-voidtraverseinreverseorder2(node *head)
+void traverseinreverseorder2(node *head)
 {
     if (head->next != NULL)
         traverseinreverseorder2(head->next);
     printf("%d\n", head->info);
 }
-node *searchunsortedlist(node *head, int item)
+node *searchinunsortedlist(node *head, int item)
 {
-    while ((head != NULL) && (head->info != NULL))
+    while ((head != NULL) && (head->next != NULL))
         head = head->next;
     return head;
 }
