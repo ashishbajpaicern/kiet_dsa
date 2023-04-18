@@ -1,6 +1,7 @@
 // program to illustrate the implementation of unsorted linear linked list
 #include <stdio.h>
 #include <stdlib.h>
+#include <conio.h>
 // defining structure of a node
 typedef struct nodetype
 {
@@ -10,9 +11,9 @@ typedef struct nodetype
 } node;
 // function prototyping
 void createemptylist(node **head);
-void traverseinorder(node *head);
+void traverseinorder1(node *head);
 void traverseinreverseorder2(node *head);
-void searchinunsortedlist(node *head, int item);
+node *searchinunsortedlist(node *head, int item);
 void auxilarysearch(node *head, node **ploc, node **loc, int item);
 void insertatbeginning(node **head, int item);
 void insertafterelement(node *head, int item, int after);
