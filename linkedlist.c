@@ -36,8 +36,8 @@ void main()
         printf("   2. insert at end\n");
         printf(" 3.insert after a given elemen\nt");
         printf("  4. traverse in order\n");
-        printf("  5. traverse in reverse order");
-        printf("  6. delete from beginning");
+        printf("  5. traverse in reverse order\n");
+        printf("  6. delete from beginning\n");
         printf("  7. delete from end\n");
         printf("  8. delete after a given element\n");
         printf("  9. reverse linked list\n");
