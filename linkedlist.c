@@ -33,8 +33,8 @@ void main()
         printf("                  option available");
         printf("++++++++++++++++++++++++++++++++++++++ \n\n");
         printf("  1. insert at beginning\n");
-        printf("   2. insert at end\n");
-        printf(" 3.insert after a given elemen\nt");
+        printf("  2. insert at end\n");
+        printf("  3.insert after a given element\n");
         printf("  4. traverse in order\n");
         printf("  5. traverse in reverse order\n");
         printf("  6. delete from beginning\n");
@@ -270,25 +270,5 @@ void deletelist(node **head)
         ptr = *head;
         *head = (*head)->next;
         free(ptr);
-    }
-}
-
-void peakelement(node *head)
-{
-    if (head == NULL || head->next == NULL)
-        return;
-    else
-    {
-        head = head->next;
-        while (head->next != NULL)
-        {
-            if ((head->info < head->prev->info) && (head->info < head->next->info))
-                printf("%d ", head->info);
-            break;
-            else
-            {
-                head = head->next;
-            }
-        }
     }
 }

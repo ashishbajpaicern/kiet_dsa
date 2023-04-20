@@ -40,27 +40,33 @@ void traverseinorder1(node *head)
     }
 }
 
-void peakelement(node *head)
+node *search(node *head, int item)
 {
-    if (head == NULL || head->next == NULL)
-        return;
+    if (head == NULL)
+    {
+        printf("list is empty");
+        return NULL;
+    }
     else
     {
-        head = head->next;
-        while (head->next != NULL)
+        while (head != NULL)
         {
-            print("%d", head->info);
-            if ((head->info < head->prev->info) && (head->info < head->next->info))
+            if (head->info == item)
             {
-                printf("%d ", head->info);
-                break;
+                printf("element found");
+                return head;
+            }
+            else if (item < head->info)
+            {
+                printf("element not found");
+                return NULL;
             }
             else
-            {
                 head = head->next;
-            }
         }
+        return NULL;
     }
+    printf("%d\n", head->info);
 }
 
 void main()
@@ -92,8 +98,9 @@ void main()
             traverseinorder1(head);
             break;
         case 3:
-
-            peakelement(head);
+            printf("\n enter element");
+            scanf("%d", &element);
+            node *a = search(head, element);
             break;
 
         case 4:
