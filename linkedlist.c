@@ -272,3 +272,23 @@ void deletelist(node **head)
         free(ptr);
     }
 }
+
+void peakelement(node *head)
+{
+    if (head == NULL || head->next == NULL)
+        return;
+    else
+    {
+        head = head->next;
+        while (head->next != NULL)
+        {
+            if ((head->info < head->prev->info) && (head->info < head->next->info))
+                printf("%d ", head->info);
+            break;
+            else
+            {
+                head = head->next;
+            }
+        }
+    }
+}
