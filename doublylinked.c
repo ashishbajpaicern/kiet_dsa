@@ -79,10 +79,9 @@ void main()
     {
         printf("                  option available");
         printf("++++++++++++++++++++++++++++++++++++++ \n\n");
-        printf("  1. insert at beginning\n");
-        printf("   2. traverse\n");
-        printf(" 3.peak element\nt");
-
+        printf(" 1. insert at beginning\n");
+        printf(" 2. traverse\n");
+        printf(" 3.Search\n");
         printf("  4. exit\n\n");
         printf("enter your choice(1-4)");
         scanf("%d", &choice);
@@ -105,6 +104,9 @@ void main()
 
         case 4:
             exit(1);
+        default:
+            printf("invalid choice");
+            break;
         }
     }
 } //
